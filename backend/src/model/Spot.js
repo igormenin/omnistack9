@@ -18,6 +18,7 @@ const SpotSchema = new mongoose.Schema({
 })
 
 SpotSchema.virtual('thumbnail_url').get(function() {
+  // console.log(ipLocal);
   return `http://${ipLocal}:3333/files/${this.thumbnail}`
   // return `http://192.168.0.108:3333/files/${this.thumbnail}`
 })
